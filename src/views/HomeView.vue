@@ -4,6 +4,7 @@ import { useStorage } from "@/composables/useStorage";
 import { ref } from "vue";
 
 import TabbableTextarea from "@/components/TabbableTextarea.vue";
+import Quiz from "@/components/Quiz/Quiz.vue";
 
 const { flash } = useFlash();
 
@@ -11,10 +12,6 @@ const food = useStorage("food");
 const age = useStorage("age");
 
 const comment = ref("test comment");
-
-setTimeout(() => {
-  comment.value = "Updated";
-}, 2000);
 </script>
 
 <template>
@@ -36,6 +33,10 @@ setTimeout(() => {
     </div>
     <div class="mt-6">
       <TabbableTextarea v-model="comment" style="width: 100%; height: 300px" />
+    </div>
+
+    <div class="mt-6">
+      <Quiz :quiz="{ name: 'My first Quiz', questions: [] }" />
     </div>
   </main>
 </template>
