@@ -1,9 +1,15 @@
-<script setup>
-import TheWelcome from "../components/TheWelcome.vue";
+<script>
+export default {
+  methods: {
+    flash(text) {
+      alert(text);
+    },
+  },
+};
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <button @click="flash('It Works!')">Click Me</button>
   </main>
 </template>
