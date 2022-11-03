@@ -11,7 +11,10 @@ defineProps({
 
 const name = ref("John Doe");
 
-provide("name", name);
+provide("name", {
+  name,
+  changeName: () => (name.value = "Name has been changed!"),
+});
 </script>
 
 <template>
