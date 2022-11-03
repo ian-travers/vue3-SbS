@@ -1,24 +1,11 @@
 <script setup>
-import { ref, watch } from "vue";
-
 import { useFlash } from "@/composables/useFlash";
+import { useStorage } from "@/composables/useStorage";
 
 const { flash } = useFlash();
 
-const food = ref(localStorage.getItem("food"));
-const age = ref(localStorage.getItem("age"));
-
-watch(food, (val) => {
-  write("food", val);
-});
-
-watch(age, (val) => {
-  write("age", val);
-});
-
-function write(key, val) {
-  localStorage.setItem(key, val);
-}
+const food = useStorage("food");
+const age = useStorage("age");
 </script>
 
 <template>
@@ -31,11 +18,11 @@ function write(key, val) {
     <div>
       <p>
         What is your favorite food?
-        <input type="text" v-model="food" @input="write('food', food)" />
+        <input type="text" v-model="food" />
       </p>
       <p>
         How old are you?
-        <input type="text" v-model="age" @input="write('age', age)" />
+        <input type="text" v-model="age" />
       </p>
     </div>
   </main>
