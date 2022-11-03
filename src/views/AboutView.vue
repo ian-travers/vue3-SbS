@@ -1,11 +1,8 @@
 <script>
-import swal from "sweetalert";
+import flash from "@/mixins/flash";
+
 export default {
-  methods: {
-    flash(text) {
-      swal("Success", text, "success");
-    },
-  },
+  mixins: [flash],
 };
 </script>
 
