@@ -1,24 +1,18 @@
 <script setup>
-import { provide, ref } from "vue";
+import { provide } from "vue";
 
 import QuizHeader from "@/components/Quiz/QuizHeader.vue";
 import QuizQuestion from "@/components/Quiz/QuizQuestion.vue";
 import QuizFooter from "@/components/Quiz/QuizFooter.vue";
 
-defineProps({
+const props = defineProps({
   quiz: Object,
 });
 
-const name = ref("John Doe");
-
-provide("name", {
-  name,
-  changeName: () => (name.value = "Name has been changed!"),
-});
+provide("quiz", props.quiz);
 </script>
 
 <template>
-  <h2>{{ name }}</h2>
   <QuizHeader />
   <QuizQuestion />
   <QuizFooter :quiz="quiz" />
