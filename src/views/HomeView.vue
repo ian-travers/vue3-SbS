@@ -1,12 +1,20 @@
 <script setup>
-import TabbableTextarea from "@/components/TabbableTextarea.vue";
 import { useFlash } from "@/composables/useFlash";
 import { useStorage } from "@/composables/useStorage";
+import { ref } from "vue";
+
+import TabbableTextarea from "@/components/TabbableTextarea.vue";
 
 const { flash } = useFlash();
 
 const food = useStorage("food");
 const age = useStorage("age");
+
+const comment = ref("test comment");
+
+setTimeout(() => {
+  comment.value = "Updated";
+}, 2000);
 </script>
 
 <template>
@@ -27,7 +35,7 @@ const age = useStorage("age");
       </p>
     </div>
     <div class="mt-6">
-      <TabbableTextarea style="width: 100%; height: 300px" />
+      <TabbableTextarea v-model="comment" style="width: 100%; height: 300px" />
     </div>
   </main>
 </template>
