@@ -4,8 +4,8 @@ import { useStorage } from "@/composables/useStorage";
 
 const { flash } = useFlash();
 
-const food = useStorage("food");
-const age = useStorage("age");
+const food = useStorage("food", "salad");
+const age = useStorage("age", "15");
 </script>
 
 <template>
