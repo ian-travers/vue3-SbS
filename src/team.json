@@ -1,27 +1,31 @@
-[
-  {
-    "name": "James Doe",
-    "email": "james@doe.com",
-    "status": "active"
-  },
-  {
-    "name": "Jane Doe",
-    "email": "jane@doe.com",
-    "status": "active"
-  },
-  {
-    "name": "Steven Doe",
-    "email": "steven@doe.com",
-    "status": "active"
-  },
-  {
-    "name": "Jen Doe",
-    "email": "jen@doe.com",
-    "status": "active"
-  },
-  {
-    "name": "Joe Doe",
-    "email": "joe@doe.com",
-    "status": "active"
-  }
-]
+{
+  "name": "Smiley",
+  "spots": 5,
+  "members": [
+    {
+      "name": "James Doe",
+      "email": "james@doe.com",
+      "status": "active"
+    },
+    {
+      "name": "Jane Doe",
+      "email": "jane@doe.com",
+      "status": "active"
+    },
+    {
+      "name": "Steven Doe",
+      "email": "steven@doe.com",
+      "status": "active"
+    },
+    {
+      "name": "Jen Doe",
+      "email": "jen@doe.com",
+      "status": "active"
+    },
+    {
+      "name": "Joe Doe",
+      "email": "joe@doe.com",
+      "status": "active"
+    }
+  ]
+}
