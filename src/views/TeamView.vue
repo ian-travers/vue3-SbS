@@ -3,9 +3,9 @@
     <div>
       <button
         class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded disabled:bg-gray-400"
-        :disabled="true"
+        :disabled="team.members.length === team.spots"
       >
-        Add Member (0 Spots Left)
+        Add Member ({{ team.spots - team.members.length }} Spots Left)
       </button>
     </div>
 
@@ -55,7 +55,10 @@
       </tbody>
     </table>
 
-    <p class="text-right text-gray-600 italic">
+    <p
+      class="text-right text-gray-600 italic"
+      v-show="team.members.length === team.spots"
+    >
       There are no remaining team spots. Upgrade to add more.
     </p>
   </div>
