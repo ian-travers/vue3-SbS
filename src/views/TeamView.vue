@@ -45,7 +45,11 @@
       </thead>
 
       <tbody>
-        <TeamMember name="James Doe" email="james@doe.net" status="Active" />
+        <TeamMember name="James Doe" email="james@doe.com" status="Active" />
+        <TeamMember name="Sarah Doe" email="sarah@doe.com" status="Active" />
+        <TeamMember name="Steven Doe" email="steven@doe.com" status="Active" />
+        <TeamMember name="Jen Doe" email="jen@doe.com" status="Active" />
+        <TeamMember name="Joe Doe" email="joe@doe.com" status="Active" />
       </tbody>
     </table>
 
