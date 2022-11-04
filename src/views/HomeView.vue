@@ -36,7 +36,7 @@ const comment = ref("test comment");
     </div>
 
     <div class="mt-6">
-      <Quiz :quiz="{ name: 'My first Quiz', questions: [] }" />
+      <Quiz />
     </div>
   </main>
 </template>

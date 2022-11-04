@@ -1,12 +1,11 @@
 <script setup>
-defineProps({
-  quiz: Object,
-});
+import { state } from "@/stores/quizStore";
 </script>
 
 <template>
   <div>
-    <h5>{{ quiz.name }}</h5>
+    <h5>{{ state.name }}</h5>
+    <button @click="state.name = 'CHANGED'">Change Name</button>
     <ul>
       <li><a href="#">Get a Job</a></li>
       <li><a href="#">Contact Us</a></li>
