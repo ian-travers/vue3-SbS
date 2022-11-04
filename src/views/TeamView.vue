@@ -45,22 +45,7 @@
       </thead>
 
       <tbody>
-        <tr class="bg-gray-100 px-12">
-          <td class="text-xl font-medium flex items-center gap-x-4 px-6 py-4">
-            <img
-              src="https://i.pravatar.cc/50?u=james@doe.com"
-              alt=""
-              class="rounded-xl"
-            />
-            James Doe
-          </td>
-
-          <td class="text-gray-500 px-6 py-4">james@doe.com</td>
-
-          <td class="px-6 py-4">
-            <button class="text-green-400 text-xl">Active</button>
-          </td>
-        </tr>
+        <TeamMember name="James Doe" email="james@doe.net" status="Active" />
       </tbody>
     </table>
 
@@ -73,3 +58,7 @@
     <h5 class="font-semibold text-lg">Smiley - 5 Member Team</h5>
   </footer>
 </template>
+
+<script setup>
+import TeamMember from "@/components/Teams/TeamMember.vue";
+</script>
