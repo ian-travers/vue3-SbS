@@ -45,11 +45,13 @@
       </thead>
 
       <tbody>
-        <TeamMember name="James Doe" email="james@doe.com" status="Active" />
-        <TeamMember name="Sarah Doe" email="sarah@doe.com" status="Active" />
-        <TeamMember name="Steven Doe" email="steven@doe.com" status="Active" />
-        <TeamMember name="Jen Doe" email="jen@doe.com" status="Active" />
-        <TeamMember name="Joe Doe" email="joe@doe.com" status="Active" />
+        <TeamMember
+          v-for="member in team"
+          :key="member.email"
+          :name="member.name"
+          :email="member.email"
+          :status="member.active"
+        />
       </tbody>
     </table>
 
@@ -65,4 +67,5 @@
 
 <script setup>
 import TeamMember from "@/components/Teams/TeamMember.vue";
+import team from "@/team.json";
 </script>
