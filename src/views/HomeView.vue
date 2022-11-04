@@ -40,9 +40,3 @@ const comment = ref("test comment");
     </div>
   </main>
 </template>
-
-<style scoped>
-.mt-6 {
-  margin-top: 3rem;
-}
-</style>
