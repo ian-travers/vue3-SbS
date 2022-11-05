@@ -10,10 +10,9 @@ const useTeamStore = defineStore("team", {
   },
 
   actions: {
-    fill() {
-      import("@/team.json").then((r) => {
-        this.$state = r.default;
-      });
+    async fill() {
+      const r = await import("@/team.json");
+      this.$state = r.default;
     },
   },
 });
