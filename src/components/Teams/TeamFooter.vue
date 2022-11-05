@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-defineProps({
-  team: Object,
-});
+import useTeamStore from "@/stores/TeamStore";
+
+const team = useTeamStore();
 </script>

@@ -14,6 +14,10 @@ const useTeamStore = defineStore("team", {
       const r = await import("@/team.json");
       this.$state = r.default;
     },
+
+    grow(spots) {
+      this.spots = spots;
+    },
   },
 });
 
