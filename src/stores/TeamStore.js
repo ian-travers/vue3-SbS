@@ -13,9 +13,12 @@ const useTeamStore = defineStore("team", {
     fill() {
       import("@/team.json").then((r) => {
         const data = r.default;
-        this.name = data.name;
-        this.spots = data.spots;
-        this.members = data.members;
+
+        this.$patch({
+          name: data.name,
+          spots: data.spots,
+          members: data.members,
+        });
       });
     },
   },
