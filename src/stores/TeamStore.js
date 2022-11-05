@@ -19,6 +19,12 @@ const useTeamStore = defineStore("team", {
       this.spots = spots;
     },
   },
+
+  getters: {
+    spotsRemaining() {
+      return this.spots - this.members.length;
+    },
+  },
 });
 
 export default useTeamStore;

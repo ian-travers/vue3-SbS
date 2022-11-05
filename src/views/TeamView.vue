@@ -4,10 +4,7 @@
   <div class="place-self-center flex flex-col gap-y-3 w-4/5 mx-auto">
     <TeamMembers />
 
-    <p
-      v-show="team.members.length === team.spots"
-      class="text-right text-gray-600 italic"
-    >
+    <p v-show="!team.spotsRemaining" class="text-right text-gray-600 italic">
       There are no remaining team spots. Upgrade to add more.
     </p>
   </div>
