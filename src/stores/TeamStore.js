@@ -1,13 +1,11 @@
 import { defineStore } from "pinia";
 
 const useTeamStore = defineStore("team", {
-  state() {
-    return {
-      name: "",
-      spots: 0,
-      members: [],
-    };
-  },
+  state: () => ({
+    name: "",
+    spots: 0,
+    members: [],
+  }),
 
   actions: {
     async fill() {
