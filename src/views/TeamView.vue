@@ -5,8 +5,8 @@
     <TeamMembers :team="team" />
 
     <p
-      class="text-right text-gray-600 italic"
       v-show="team.members.length === team.spots"
+      class="text-right text-gray-600 italic"
     >
       There are no remaining team spots. Upgrade to add more.
     </p>
@@ -19,5 +19,10 @@
 import TeamHeader from "@/components/Teams/TeamHeader.vue";
 import TeamMembers from "@/components/Teams/TeamMembers.vue";
 import TeamFooter from "@/components/Teams/TeamFooter.vue";
-import team from "@/team.json";
+// import team from "@/team.json";
+import useTeamStore from "@/stores/TeamStore";
+
+const team = useTeamStore();
+
+team.fill();
 </script>
